@@ -29,14 +29,48 @@ html, body {
     @media screen and (max-width: 480px) {
       min-height: 100%;
     }
+    .bg-camera {
+      background: url("http://i.imgur.com/NC7U7m8.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: bottom;
+    }
+    .bg-book {
+      background: url("http://i.imgur.com/jWg35Qy.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: bottom;
+    }
+    .bg-guitar {
+      background: url("http://i.imgur.com/LsqrOga.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: bottom;
+    }
+    .bg-bike {
+      background: url("http://i.imgur.com/X134Ybr.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: bottom;
+    }
+    .bg-kitchen {
+      background: url("http://i.imgur.com/g4ibAhq.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      background-position: bottom;
+    }
     margin: 0;
     padding: 0;
-    background: url("http://i.imgur.com/NC7U7m8.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background-position: top;
     width: 100%;
     height: 620px;
     #top-overlay {
@@ -86,7 +120,7 @@ html, body {
         height: 540px;
         max-width: 1360px;
         margin: auto;
-        h1 {
+        #pseudo-search {
           @media screen and (max-width: 480px) {
             font-size: 5em;
             text-decoration: none;
@@ -103,7 +137,7 @@ html, body {
           font-weight: 500;
           text-decoration: underline;
           color: white;
-          .blinking-cursor {
+          .typed-cursor {
             font-weight: 500;
             display: inline-block;
             text-decoration: none !important;
@@ -114,8 +148,8 @@ html, body {
           width: 220px;
           height: 50px;
           padding: 0px;
-          margin-top: 60px;
-          margin-left: 530px;
+          margin-top: 5%;
+          margin-left: 40%;
           position: relative;
           background-color: white;
           border: solid 1px rgba(255, 255, 255, 1);
@@ -132,6 +166,14 @@ html, body {
         }
       }
     }
+  }
+}
+
+#signup-window-container {
+  width: 50%;
+  border-radius: 5px;
+  #signup-input {
+    margin: 10px;
   }
 }
 
