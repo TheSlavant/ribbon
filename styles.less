@@ -16,58 +16,26 @@ html, body {
 
 #homepage {
   height: 100%;
-  .darken-overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    opacity: 0.85
-  }
   #top-content, #top-overlay {
-    @media screen and (max-width: 480px) {
-      min-height: 100%;
-    }
     .bg-camera {
       background: url("http://i.imgur.com/NC7U7m8.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: bottom;
+      .background-settings(0.5s)
     }
     .bg-book {
       background: url("http://i.imgur.com/jWg35Qy.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: bottom;
+      .background-settings(0.5s)
     }
     .bg-guitar {
       background: url("http://i.imgur.com/LsqrOga.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: bottom;
+      .background-settings(0.5s)
     }
     .bg-bike {
       background: url("http://i.imgur.com/X134Ybr.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: bottom;
+      .background-settings(0.5s)
     }
     .bg-kitchen {
       background: url("http://i.imgur.com/g4ibAhq.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      background-position: bottom;
+      .background-settings(0.5s)
     }
     margin: 0;
     padding: 0;
@@ -182,6 +150,12 @@ html, body {
     margin: auto;
 }
 
+@media screen and (max-width: 480px) {
+  #top-content, #top-overlay {
+    min-height: 100%;
+  }
+}
+
 @media screen and (min-width: 480px) {
   #top-view {
     #pseudo-search {
@@ -253,4 +227,18 @@ html, body {
   50% {
     color: white;
   }
+}
+
+.background-settings(@time) {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: right;
+  -webkit-transition: background-image @time ease-in-out;
+  -moz-transition: background-image @time ease-in-out;
+  -ms-transition: background-image @time ease-in-out;
+  -o-transition: background-image @time ease-in-out;
+  transition: background-image @time ease-in-out;
 }
