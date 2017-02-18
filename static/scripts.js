@@ -2,13 +2,13 @@ $(function(){
   var x = 0;
       $(".pseudo-search-type").typed({
         strings: ["a camera", "a book", "a guitar", "a bike", "kitchenware"],
-        typeSpeed: 90, // typing speed
-        startDelay: 300,
-        backDelay: 4000, // pause before backspacing
+        typeSpeed: 100, // typing speed
+        startDelay: 0,
+        backDelay: 5000, // pause before backspacing
         backSpeed: 90,
         loop: true, // loop on or off (true or false)
         loopCount: false, // number of loops, false = infinite
-        onStringTyped: function() {
+        preStringTyped: function() {
           console.log(x);
           ++x;
           if (x == 5) {
