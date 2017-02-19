@@ -7,8 +7,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css?family=Cookie|PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="stylesheet" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	<link rel="stylesheet" href="{% static 'w3.css' %}">
 </head>
 
 <body>
@@ -63,9 +63,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="jquery.js"></script>
-	<script src="typed.js"></script>
-	<script src="scripts.js"></script>
+	<script src="{% static 'jquery.js' %}"></script>
+	<script src="{% static 'typed.js' %}"></script>
+	<script src="{% static 'scripts.js' %}"></script>
 </body>
 
 </html>
