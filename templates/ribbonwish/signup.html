@@ -43,18 +43,29 @@
 									class="w3-closebtn">&times;</span>
 									<div id="signup-window-header" class="w3-row">
 										<h1 class="w3-center">Sign Up</h1>
+										{% if registered %}
+        									<strong>thank you for registering!</strong>
+        									<a href="/feed/">Return to the homepage.</a><br />
+       										{% else %}
+       										 					
 										<p id=optional-login>Already have an account? <span
 											id="optional-login-link">Log in</span></p>
-										<form id="signup-window-data" >
-											<input id="signup-input-name" class="w3-input w3-border"
-											type="text" name="full-name" placeholder="Full Name">
-											<input id="signup-input" class="w3-input w3-border"
-											type="text" name="email" placeholder="Email Address">
-											<input id="signup-input" class="w3-input w3-border"
-											type="text" name="password" placeholder="Password">
-											<p id="demo"></p>
-											<button onclick="getAuthData()">Press</button>
-										</form>
+									
+        									<form id="user_form" method="post" action="/register/"
+               									 enctype="multipart/form-data">
+
+            									{% csrf_token %}
+
+           
+            									{{ user_form.as_p }}
+           									{{ profile_form.as_p }}
+
+           
+           								       <input type="submit" name="submit" value="Register" />
+        									</form>
+        					
+            									        									</form>
+        									{% endif %}
 									</div>
 								</div>
 							</div>
