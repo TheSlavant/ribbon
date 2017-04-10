@@ -1,85 +1,201 @@
 <!DOCTYPE html>
-{% load staticfiles %}
-<html>
+<html lang="en">
 
 <head>
-    <title>Ribbon</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ribbon Wish</title>
     <link href="https://fonts.googleapis.com/css?family=Cookie|PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="fonts\Athelas-Regular.ttf" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body>
-{% if registered %}
-<strong>thank you for registering!</strong>
-<a href="/feed/">Return to the homepage.</a><br/>
-{% else %}
-<div id="homepage">
-    <div class="w3-container" id="top-content">
-        <div id="top-background">
+
+    <div id="signup-page">
+        <div id="backgr-image">
             <div id="top-overlay">
-                <div class="w3-row" id="fixbar-region">
-                    <header id="top-navbar">
-                        <div class="w3-col s6 m2 l2" id="navbar-left">
-                            <span id="icon">Ribbon</span>
-                        </div>
-                        <div id="navbar-center">
-                        </div>
-                        <div id="navbar-right">
-                            <button type="button">Log in</button>
-                            <button onclick="document.getElementById('signup-window').style.display='block'"
-                                    class="w3-hide-small" type="button">Sign up
-                            </button>
-                        </div>
-                    </header>
-                </div>
-                <div id="top-view">
-                    <div class="w3-col s1 m2 l2"></div>
-                    <h1 id="pseudo-search" class="w3-rest">I want <span class="pseudo-search-type"></span></h1>
-                    <button onclick="document.getElementById('signup-window').style.display='block'"
-                            type="button">START MY RIBBON
-                    </button>
-                    <div id="signup-window" class="w3-modal">
-                        <div id="signup-window-container" class="w3-modal-content">
-                            <div class="w3-container">
-									<span onclick="document.getElementById('signup-window').style.display='none'"
-                                          class="w3-closebtn">&times;</span>
-                                <div id="signup-window-header" class="w3-row">
-                                    <h1 class="w3-center">Sign Up</h1>
+                <!-- Navbar -->
+                <div class="container-fluid " id="navbar">
+                    <div class="row ">
+                        <div class="navbar navbar-default navbar-fixed-top transp " role="navigation" id="navbar-signup">
+                            <div class="container-fluid ">
+                                <div class="navbar-header ">
+                                    <button type="button " class="navbar-toggle " data-toogle="collapse " data-target="#responsive-menu">
+                                    <span class="sr-only ">Open Nav</span>
+                                    <span class="icon-bar "></span>
+                                    <span class="icon-bar "></span>
+                                    <span class="icon-bar "></span>
+                                  </button>
 
+                                    <a class="navbar-brand " href="# ">Ribbon</a>
 
-                                    <form id="user_form" method="post" action="/feed/"
-                                          enctype="multipart/form-data">
-
-                                        {% csrf_token %}
-
-
-                                        {{ user_form.as_p }}
-                                        {{ profile_form.as_p }}
-
-
-                                        <input type="submit" name="submit" value="Register"/>
-                                    </form>
-
-                                    </form>
-
+                                </div>
+                                <div class="collapse navbar-collapse " id="responsive-menu ">
+                                    <ul class="nav navbar-nav pull-right ">
+                                        <li><button type="button " href="# " class="btn navigbtn" style="outline:none; margin-right: 20px;">Log In</button> </li>
+                                        <li><button type="button " class="btn navigbtn" style="outline:none; margin-right: 55px;" data-target="#modalsignup" role="button" data-toggle="modal" style="margin-right: x55px;">Sign Up</button></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!--End of navbar-->
+
+                <div id="top-content">
+
+                    <div class="main-text">
+                        I want a camera
+                    </div>
+                    <div><button type="button" href="#" class="button_create">CREATE MY RIBBON</button></div>
+
+                </div>
+
+            </div>
+
+
+            <div class="center-content ">
+                <div class="whitebackgr ">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h1>Заголовок 1</h1></center>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h3>Подзаголовок 1</h3>
+                                </center>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-lg-4 ">
+
+                            </div>
+                            <div class=" col-lg-6 ">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="peachbackgr ">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h1>Заголовок 1</h1></center>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h3>Подзаголовок 1</h3>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="whitebackgr ">
+                    <div class="container ">
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h1>Заголовок 1</h1></center>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h3>Подзаголовок 1</h3>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer ">
+                    <div class="container-fluid ">
+                        <div class="row ">
+                            <div class="col-lg-12 ">
+                                <center>
+                                    <h1>Footer</h1></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
-</div>
-<script src="{% static 'jquery.js' %}"></script>
-<script src="{% static 'typed.js' %}"></script>
-<script src="{% static 'scripts.js' %}"></script>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript " src="js/jquery.js "></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js "></script>
 
-{% endif %}
+    <div class="modal fade " id="modalsignup">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button class="close" type="button" style="outline: none" data-dismiss="modal"><span class="glyphicon glyphicon-remove "></span></button>
+                    <h4 class="modal-title ">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form id="signup-window-data">
+                        <p>Already have an account? <a href="# ">Log In</a>
+                        </p>
+                        <div class="form-group ">
+                            <input id="signup-input-name" class="form-control " type="text " name="full-name " placeholder="Full Name ">
+                        </div>
+                        <div class="form-group ">
+                            <input id="signup-input " class="form-control " type="text " name="email " placeholder="E-mail ">
+                        </div>
+                        <div class="form-group ">
+                            <input id="signup-input " class="form-control " type="password " name="password " placeholder="Password ">
+                        </div>
+
+                        <center><button type="submit" class="signup-button" style="outline:none "><span class="fa fa-sign-up">Sign Up</span></button></center>
+
+                        <div class="signup-sn-group">
+                            <div>
+                                <span><button class="signup-facebook">With Facebook</button><button class="signup-vk">With VK</button></span>
+                                <div>
+                                    <button class="signup-google">With Google+</button>
+                                </div>
+                            </div>
+                        </div>
+
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
 </body>
 
 </html>

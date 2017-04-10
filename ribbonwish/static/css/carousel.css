@@ -1,0 +1,74 @@
+.carousel {
+    width: 96%;
+    height: 185px;
+    /* ширина всего блока */
+    margin: 20px auto;
+}
+
+.carousel-wrapper {
+    margin: 10px 10px 30px 10px;
+    /* отступы для стрелок */
+    overflow: hidden;
+    /* скрываем содержимое, выходящее за рамки основной области */
+    position: relative;
+}
+
+.carousel-items {
+    width: 10000px;
+    /* устанавливаем большую ширину для набора элементов */
+    position: relative;
+    /* позиционируем блок относительно основной области карусели */
+}
+
+.carousel-block {
+    float: left;
+    /* выстраиваем все элементы карусели в ряд */
+    width: 150px;
+    /* задаём ширину каждого элемента */
+    padding: 10px 10px 10px 10px;
+    /* делаем оступы, чтобы элементы не сливались */
+}
+
+.carousel-block img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    background-color: #ffffff;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+}
+
+.carousel-block button {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 18px;
+    color: #feb29e;
+    float: right;
+    margin: 10px -15px 0 0;
+}
+
+
+/*********** BUTTONS ***********/
+
+.carousel-button-left button, .carousel-button-right button {
+    width: 26px;
+    height: 43px;
+    position: relative;
+    top: 60px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.carousel-button-left button {
+    float: left;
+    border: 0px !important;
+    outline: none;
+    background: url(../img/left-arrow.png);
+}
+
+.carousel-button-right button {
+    margin-left: 10px;
+    float: right;
+    border: 0px !important;
+    outline: none;
+    background: url(../img/right-arrow.png);
+}
