@@ -135,3 +135,16 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR,  "ribbonwish", "static")
 LOGIN_URL = 'signup'
 SITE_ID = 1
+
+ACCOUNT_USERNAME_REQUIRED = False
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+        'REGISTER_SERIALIZER': 'ribbonwish.serializers.RegisterSerializer',
+}
