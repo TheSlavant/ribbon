@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -8,9 +9,9 @@
     <title>Ribbon Wish</title>
     <link href="https://fonts.googleapis.com/css?family=Cookie|PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="fonts\Athelas-Regular.ttf" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}"rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}"rel="stylesheet">
+    <link href="{% static 'fonts\Athelas-Regular.ttf' %}"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="fonts\helvetica-bold.ttf" rel="stylesheet" type="text/css">
@@ -80,15 +81,18 @@
                             <div class="col-lg-5 col-md-5">
                                 <div class="textblock">
                                     <div class="textblock_text">
-                                        <img src="img\whole-gift@2x.png" style="width: 40px; height: 40px;" />
+                                        <img src="{% static 'img\whole-gift@2x.png' %}"
+                                             style="width: 40px; height: 40px;" />
                                         <span>Текст</span>
                                     </div>
                                     <div class="textblock_text">
-                                        <img src="img\whole-gift@2x.png" style="width: 40px; height: 40px;" />
+                                        <img src="{% static 'img\whole-gift@2x.png' %}"
+                                             style="width: 40px; height: 40px;" />
                                         <span>Текст</span>
                                     </div>
                                     <div class="textblock_text">
-                                        <img src="img\whole-gift@2x.png" style="width: 40px; height: 40px;" />
+                                        <img src="{% static 'img\whole-gift@2x.png' %}"
+                                             style="width: 40px; height: 40px;" />
                                         <span>Текст</span>
                                     </div>
                                 </div>
@@ -160,10 +164,10 @@
     </div>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script type="text/javascript " src="js/jquery.js "></script>
+    <script type="text/javascript " src="{% static 'js/jquery.js' %}" ></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.js "></script>
-    <script src="js/scroll.js "></script>
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    <script src="{% static 'js/scroll.js' %}" ></script>
 
 
     <div class="modal fade " id="modalsignup">
@@ -199,8 +203,10 @@
                             </div>
                         </div>
 
-                </div>
+
                 </form>
+
+                </div>
 
             </div>
         </div>

@@ -43,7 +43,12 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'ribbonwish',
+    'bootstrap3',
+    'crispy_forms'
 ]
+
+CRISPY_TEMPLATE_PACK = 'boostrap3'
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +65,7 @@ ROOT_URLCONF = 'ribbon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,  "ribbonwish", "templates", "ribbonwish")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -136,7 +141,12 @@ STATIC_ROOT = os.path.join(BASE_DIR,  "ribbonwish", "static")
 LOGIN_URL = 'signup'
 SITE_ID = 1
 
-ACCOUNT_USERNAME_REQUIRED = False
+
+REST_SESSION_LOGIN = False
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+ACCOUNT_EMAIL_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'username'
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -145,6 +155,6 @@ REST_FRAMEWORK = {
     )
 }
 
-REST_AUTH_REGISTER_SERIALIZERS = {
-        'REGISTER_SERIALIZER': 'ribbonwish.serializers.RegisterSerializer',
-}
+# REST_AUTH_REGISTER_SERIALIZERS = {
+#         'REGISTER_SERIALIZER': 'ribbonwish.serializers.RegisterSerializer',
+# }

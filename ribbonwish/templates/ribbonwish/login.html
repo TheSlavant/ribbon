@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 
 <head>
@@ -8,12 +9,13 @@
     <title>Ribbon - Log in</title>
     <link href="https://fonts.googleapis.com/css?family=Cookie|PT+Serif+Caption&amp;subset=cyrillic" rel="stylesheet">
     <!-- Bootstrap -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="fonts\Athelas-Regular.ttf" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}"rel="stylesheet">
+    <link href="{% static 'css/styles.css' %}"rel="stylesheet">
+    <link href="{% static 'fonts\Athelas-Regular.ttf' %}"rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700&amp;subset=cyrillic" rel="stylesheet">
-    <link href="fonts\Athelas-Regular.ttf" rel="stylesheet" type="text/css">
+    <link href="{% static 'fonts\Athelas-Regular.ttf' %}"rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
