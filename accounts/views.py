@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import  render
 from django.contrib.auth import (
     authenticate,
     get_user_model,
@@ -38,18 +37,15 @@ def register_view(request):
         password = form.cleaned_data.get('password')
         user.set_password(password)
         user.save()
-        new_user = authenticate(username=user.username, password=password)
+        new_user = authenticate(email=user.email, password=password)
         login(request, new_user)
         if next:
             return redirect(next)
         return redirect("/")
 
-    context = {
-        "form": form,
-        "title": title
-    }
-    return render(request, "signup.html", context)
+    return render(request, "signup.html", {"form":form, "title": title})
 
 def logout_view(request):
     logout(request)
     return render(request, "login.html", {})
+

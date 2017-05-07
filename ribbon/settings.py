@@ -29,23 +29,26 @@ ALLOWED_HOSTS = ['.elasticbeanstalk.com', u'django-env.3qas4rpphi.us-west-2.elas
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    # 'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'rest_auth.registration',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'rest_auth',
+    # 'allauth',
+    # 'allauth.account',
+    # 'rest_auth.registration',
+    # 'rest_framework',
+    # 'rest_framework.authtoken',
+    # 'rest_auth',
+    # 'bootstrap3',
+    # 'crispy_forms',
     'ribbonwish',
-    'bootstrap3',
-    'crispy_forms'
+    'accounts'
 ]
+
+
 
 CRISPY_TEMPLATE_PACK = 'boostrap3'
 CRISPY_TEMPLATE_PACK = 'uni_form'
@@ -132,6 +135,7 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTH_USER_MODEL ='ribbonwish.User'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -142,18 +146,19 @@ LOGIN_URL = 'signup'
 SITE_ID = 1
 
 
-REST_SESSION_LOGIN = False
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-ACCOUNT_EMAIL_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
-ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework.authentication.SessionAuthentication',
-        'rest_framework.authentication.TokenAuthentication',
-    )
-}
+# REST_SESSION_LOGIN = False
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# ACCOUNT_EMAIL_REQUIRED = False
+# ACCOUNT_AUTHENTICATION_METHOD = 'username'
+# ACCOUNT_EMAIL_VERIFICATION = 'optional'
+#
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'rest_framework.authentication.SessionAuthentication',
+#         'rest_framework.authentication.TokenAuthentication',
+#     )
+# }
 
 # REST_AUTH_REGISTER_SERIALIZERS = {
 #         'REGISTER_SERIALIZER': 'ribbonwish.serializers.RegisterSerializer',
