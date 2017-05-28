@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.models import PermissionsMixin
 from django.db import models
+from django.conf import settings
 
 from ribbonwish.managers import UserManager
 
@@ -46,6 +47,33 @@ class User(AbstractBaseUser, PermissionsMixin):
         return self.email
         # send_mail(subject, message, from_email, [self.email], **kwargs)
 
+
+# class Course(models.Model):
+#     slug = models.SlugField(max_length=100)
+#     name = models.CharField(max_length=100)
+#     tutor = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+class Friendship(models.Model):
+    from_friend = models.ForeignKey(
+        settings.AUTH_USER_MODEL, related_name='friend_set'
+    )
+    to_friend = models.ForeignKey(
+        settings.AUTH_USER_MODEL, related_name='to_friend_set'
+    )
+
+
+    def __str__(self):
+        return '%s, %s' % (
+            self.from_friend.email,
+            self.to_friend.email
+        )
+
+    class Admin:
+        pass
+
+    class Meta:
+        unique_together = (('to_friend', 'from_friend'),)
+
 # class UserProfile(models.Model):
 #     #
 #     user = models.OneToOneField(User)
@@ -57,3 +85,5 @@ class User(AbstractBaseUser, PermissionsMixin):
 #     #
 #     def __unicode__(self):
 #         return self.user.username
+
+

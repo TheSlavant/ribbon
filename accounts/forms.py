@@ -30,7 +30,7 @@ class UserLoginForm(forms.Form):
 
 
 class UserRegisterForm(forms.ModelForm):
-    fist_name = forms.CharField()
+    first_name = forms.CharField()
     last_name = forms.CharField()
     email = forms.EmailField(label='Email address')
     email2 = forms.EmailField(label='Confirm Email')
@@ -39,14 +39,16 @@ class UserRegisterForm(forms.ModelForm):
     class Meta:
         model = User
         fields = [
-            # 'first_name',
-            # 'last_name',
+            'first_name',
+            'last_name',
             'email',
-            'email2',
+            'email2'
             # 'password'
         ]
 
     def clean(self, *args, **kwargs):
+        # first_name = self.cleaned_data('first_name')
+        # last_name = self.changed_data('last_name')
         email = self.cleaned_data.get('email')
         email2 = self.cleaned_data.get('email2')
         if email != email2:
